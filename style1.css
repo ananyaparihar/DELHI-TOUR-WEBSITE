@@ -1,0 +1,341 @@
+.heading {
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+
+}
+
+.heading video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes video cover entire space */
+    display: block;
+}
+
+header {
+    padding: 18px;
+    background-color: rgb(160, 141, 141);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-btn {
+    padding: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-btn:hover {
+    color: blue;
+}
+
+.profile_img {
+    height: 150px;
+    width: 187px;
+}
+
+h2 {
+    text-align: center;
+    background-color: darkkhaki;
+    margin: 0px;
+    padding: 10px;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 30px;
+    background-color: rgb(214, 208, 208);
+}
+
+.foot {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(89, 99, 192);
+    text-decoration: none;
+
+}
+
+.foot:hover {
+    color: rgb(94, 14, 168);
+}
+
+.back_section1 {
+    width: 100%;
+    height: 800px;
+    background-image: url(image/cp.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* centers the card */
+    justify-content: flex-start;
+
+}
+
+.card1 img {
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.card2 {
+    width: 487px;
+    height: 400px;
+    padding: 20px;
+    margin-left: 30px;
+    margin: 20px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.card2 p {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    width: 400px;
+    height: 300px;
+    word-spacing: 3px;
+    overflow: hidden;
+    background-color: thistle;
+
+}
+
+.back_section1 {
+    position: relative;
+    background: url("image/cp.jpeg") no-repeat center center/cover;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Faded overlay */
+.back_section1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    /* white fade, adjust alpha */
+    z-index: 1;
+}
+
+/* cards stay above overlay */
+.card1,
+.card2 {
+    position: relative;
+    z-index: 2;
+}
+
+.carousel {
+    background: rgb(134, 141, 141);
+    padding:20px 0;
+}
+
+
+
+
+.profile_img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-cell {
+    width: 500px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    /* white card behind */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    /* space for caption */
+    margin-right: 15px;
+}
+
+.caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 8px;
+    color: #333;
+    /* dark gray */
+    text-transform: uppercase;
+    /* all caps */
+    letter-spacing: 1px;
+    /* spacing between letters */
+}
+
+.caption:hover {
+    color: red;
+    cursor: pointer;
+}
+/* Tablets and smaller laptops */
+@media (max-width: 992px) {
+  .heading {
+    height: 70vh;
+  }
+
+  .menu-btn {
+    font-size: 18px;
+  }
+
+  .carousel-cell {
+    width: 320px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .back_section1 {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .card1,
+  .card2 {
+    width: 90%;
+  }
+
+  .carousel-cell {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .profile_img {
+    height: 250px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .heading {
+    height: 60vh;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    font-size: 16px;
+  }
+
+  .card1 img {
+    height: 200px;
+  }
+
+  .caption {
+    font-size: 14px;
+  }
+}
+@media (max-width: 772px) {
+  /* heading & video */
+  .heading {
+    height: 55vh;                 
+    padding: 0 10px;
+  }
+  .heading video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* header / nav */
+  header {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .menu-btn {
+    padding: 8px 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* background section -> stack cards vertically */
+  .back_section1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px;
+    min-height: auto; 
+  }
+
+  /* cards full-width but constrained */
+  .card1, .card2 {
+    width: 100%;
+    max-width: 480px;
+    margin: 6px 0;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  /* responsive images */
+  .card1 img,
+  .profile_img {
+    width: 100%;
+    height: auto;        
+    max-height: 320px;   
+    object-fit: cover;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+  }
+
+  .card2 p {
+    padding: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 260px;   /* prevents very tall blocks; adjust as needed */
+    overflow: auto;      /* allow scroll if text is long */
+  }
+
+  .carousel {
+    padding: 12px 0;
+  }
+  .carousel-cell {
+    width: 90%;
+    margin: 0 auto 12px;
+    padding-bottom: 8px;
+  }
+
+ 
+}
